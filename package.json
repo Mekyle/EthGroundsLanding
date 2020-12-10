@@ -20,6 +20,8 @@
         "tailwindcss": "^1.8.10"
     },
     "dependencies": {
+        "@oberon-amsterdam/horizontal": "^1.0.4",
+        "jquery": "^3.5.1",
         "sirv-cli": "^1.0.0"
     }
 }

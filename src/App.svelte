@@ -1,160 +1,115 @@
+<div class="horizontal-scroll">
+  <div class="horizontal-scroll__block ">
+    <h1>Hi</h1>
+  </div>
+  <div class="horizontal-scroll__block">
+    <div class="background" style="background-image: url(https://source.unsplash.com/category/technology/1024x758)"></div>
+    <span class="letter">E</span>
+  </div>
+  <div class="horizontal-scroll__block">
+    <div class="background" style="background-image: url(https://source.unsplash.com/category/buildings/1024x758)"></div>
+    <span class="letter">I</span>
+  </div>
+  <div class="horizontal-scroll__block">
+    <div class="background" style="background-image: url(https://source.unsplash.com/category/food/1024x758)"></div>
+    <span class="letter">O</span>
+  </div>
+  <div class="horizontal-scroll__block">
+    <div class="background" style="background-image: url(https://source.unsplash.com/category/people/1024x758)"></div>
+    <span class="letter">U</span>
+  </div>
+  <div class="horizontal-scroll__block">
+    <div class="background" style="background-image: url(https://source.unsplash.com/category/objects/1024x758)"></div>
+    <span class="letter">!</span>
+  </div>
+</div>
 
 <style>
-	* {
-		box-sizing: border-box;
-	}
-	.container {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 100vh;
-		background-color: black;
-		color: #fff;
-		padding: 20px;
-	}
-	.sentence {
-			font-size: 100px;
-			filter: grayscale(0.3);
-			user-select: none;
-
-			
-		}
-	.first {
-		color: #db2431;
-		word-break: break-all
-	}
-	 
-	.slider {
-		font-family: sans-serif;
-		scroll-snap-type: x mandatory;	
-		display: flex;
-		-webkit-overflow-scrolling: touch;
-		overflow-x: scroll;
-		
-	}
 
 
-	section {
-		min-width: 100vw;
-		height: 100vh;
-		scroll-snap-align: center;
-		text-align: center;
-		position: relative;
-	}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
+html {
+  font-size: 16px;
+}
 
+body {
+  overflow: hidden;
+  font-size: 1em;
+}
 
-header {
-  width: 100vw;
+.horizontal-scroll {
+ margin-top: 0%;
+  width: 100vh;
+  height: 100vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #2e2e2e;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  -webkit-transform: rotate(-90deg) translate3d(0, -100vh, 0);
+          transform: rotate(-90deg) translate3d(0, -100vh, 0);
+}
+.horizontal-scroll > * {
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
+          transform: rotate(90deg) translate3d(0, -100vh, 0);
+}
+.horizontal-scroll__block {
+  width: 100vh;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding-right: 60vw;
+  background: #fdfffc;
+  position: relative;
+}
+.horizontal-scroll__block:not(:first-child) {
+
+}
+.horizontal-scroll__block .background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: no-repeat center center / cover;
+  opacity: 0.8;
+  background-blend-mode: luminosity;
+}
+.horizontal-scroll__block .letter {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  font-weight: normal;
+  font-size: 12em;
+  font-family: "Playfair Display", serif;
+  color: white;
+}
+.horizontal-scroll__block--purple .background {
+  background-color: #52489c;
+}
+.horizontal-scroll__block--yellow .background {
+  background-color: #ecc30b;
+}
+.horizontal-scroll__block--orange .background {
+  background-color: #f37748;
+}
+.horizontal-scroll__block--blue .background {
+  background-color: #4d9de0;
+}
+.horizontal-scroll__block--green .background {
+  background-color: #00bd9d;
+}
+.horizontal-scroll__block--pink .background {
+  background-color: #fb9f89;
 }
 
-
-main {
-  display: flex;
-}
-
-section {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 var(--padding);
-}
-
-section:nth-child(1) {
-  background: rgba(80, 80, 80, 0.1);
-  margin: 0;
-  padding: var(--padding);
-}
-
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --black: #101820;
-    --white: #ffffff;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --black: #ffffff;
-    --white: #101820;
-  }
-}
-
-@media (max-width: 1200px) {
-  :root {
-    font-size: 13px;
-    --padding: 4rem;
-  }
-}
-
-@media (max-width: 700px) {
-  :root {
-    font-size: 10px;
-    --padding: 1.75rem;
-  }
-}
-
-@media (max-height: 800px) {
-  :root {
-    font-size: 10px;
-  }
-}
-
-@media (max-height: 400px) {
-  :root {
-    font-size: 7px;
-  }
-}
 </style>
-
-<div style="overflow: hidden; height: 100%;">
-	<div class="slider">
-		<!--Page one, landing page. Needs to have -->
-		<section>
-			<div class="container">
-				<h1 class="sentence"> 
-					<span class="first"></span>
-					<span class="template">is better than</span>
-					<span class="second"></span>
-				</h1>
-			</div>
-			<div class="actions">
-				<div class="random btn">
-					Random
-				</div>
-				<div class="edit btn">
-					Edit
-				</div>
-			</div>
-		</section>
-		<section>
-			<div class="text">
-				<h1>
-				<strong>Horizontal Resume</strong>
-				</h1>
-				<nav role="navigation">
-					<ul>
-						<li>
-						<a href="#" target="_blank">Lorem</a>
-						</li>
-						<li>
-						<a href="#" target="_blank">Ipsum</a>
-						</li>
-						<li>
-						<a href="#">Dolor</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</section>
-	</div>
-</div>
