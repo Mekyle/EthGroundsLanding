@@ -51,7 +51,7 @@ body {
   background: #2e2e2e;
   -webkit-transform-origin: right top;
           transform-origin: right top;
-  -webkit-transform: rotate(-90deg) translate3d(0, -100vh, 0);
+  -webkit-transform: rotate(-90deg) translate3d(0, -70vh, 0);
           transform: rotate(-90deg) translate3d(0, -100vh, 0);
 }
 .horizontal-scroll > * {
