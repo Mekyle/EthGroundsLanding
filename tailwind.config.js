@@ -1,22 +1,20 @@
+// tailwind.config.js
+const production = !process.env.ROLLUP_WATCH; // or some other env var like NODE_ENV
 module.exports = {
-    purge: {
-        mode: 'all',
-        content: ['./**/**/*.html', './**/**/*.svelte'],
-
-        options: {
-            whitelistPatterns: [/svelte-/],
-            defaultExtractor: (content) =>
-                [...content.matchAll(/(?:class:)*([\w\d-/:%.]+)/gm)].map(([_match, group, ..._rest]) => group),
-        },
-    },
-
-    theme: {
-        extend: {},
-    },
-    variants: {},
-    plugins: [],
-    future: {
-        // purgeLayersByDefault: true,
-        // removeDeprecatedGapUtilities: true,
-    },
+  future: { // for tailwind 2.0 compat
+    purgeLayersByDefault: true, 
+    removeDeprecatedGapUtilities: true,
+  },
+  plugins: [
+    // for tailwind UI users only
+    require('@tailwindcss/ui'),
+    // other plugins here
+  ],
+  purge: {
+    content: [
+      "./src/**/*.svelte",
+      // may also want to include base index.html
+    ], 
+    enabled: production // disable purge in dev
+  },
 };

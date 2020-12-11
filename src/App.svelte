@@ -1,115 +1,54 @@
-<div class="horizontal-scroll">
-  <div class="horizontal-scroll__block ">
-    <h1>Hi</h1>
+
+<style global lang="postcss">
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  .bg-header {
+    background: url(https://picsum.photos/1920/1920/?random) center center no-repeat;
+    background-attachment: fixed;
+  }
+
+  .bg-quote {
+    background: url(https://picsum.photos/1600/1600/?random) center center no-repeat;
+    background-attachment: fixed;
+  }
+</style>
+
+<header class="bg-header flex items-center justify-center h-screen pb-12">
+  <div class=" font-serif mx-4 p-4 text-left md:p-8">
+    <h1 class="text-5xl uppercase">
+      EthGrounds
+    </h1>
   </div>
-  <div class="horizontal-scroll__block">
-    <div class="background" style="background-image: url(https://source.unsplash.com/category/technology/1024x758)"></div>
-    <span class="letter">E</span>
-  </div>
-  <div class="horizontal-scroll__block">
-    <div class="background" style="background-image: url(https://source.unsplash.com/category/buildings/1024x758)"></div>
-    <span class="letter">I</span>
-  </div>
-  <div class="horizontal-scroll__block">
-    <div class="background" style="background-image: url(https://source.unsplash.com/category/food/1024x758)"></div>
-    <span class="letter">O</span>
-  </div>
-  <div class="horizontal-scroll__block">
-    <div class="background" style="background-image: url(https://source.unsplash.com/category/people/1024x758)"></div>
-    <span class="letter">U</span>
-  </div>
-  <div class="horizontal-scroll__block">
-    <div class="background" style="background-image: url(https://source.unsplash.com/category/objects/1024x758)"></div>
-    <span class="letter">!</span>
-  </div>
+</header>
+
+<div class="font-serif leading-normal mx-auto py-12 px-4 max-w-lg">
+  <p class="mb-6 text-xl md:text-2xl uppercase">This is a simple parallax effect created by setting the background attachment property to a fixed position. This technique is not meant for non-decorative images, videos, etc. as those require additional HTML and CSS to work properly.</p>
+  <p class="mb-4 text-lg">Quae commodi reiciendis dignissimos. Rerum molestiae hic dolores assumenda dolor! Corrupti reiciendis maxime fuga, recusandae obcaecati officia cum temporibus dicta quibusdam praesentium, magni, cumque aperiam iusto sequi illum molestiae non.</p>
+  <p class="mb-4 text-lg">In excepturi repellendus eum, qui corrupti rerum perferendis harum adipisci voluptate? Nihil, quidem deleniti libero officia dicta vel asperiores velit molestiae blanditiis, dolore voluptatibus excepturi laudantium at veniam illo. Dolor!</p>
+  <p class="mb-4 text-lg">Neque laudantium minus doloremque id quas quod sint velit corporis unde dolore accusantium delectus optio consequuntur voluptatem sapiente odit dolorum minima harum tenetur, dolor provident reprehenderit. Ex eum provident harum?</p>
+  <p class="mb-4 text-lg">Mollitia temporibus maxime placeat culpa distinctio possimus, praesentium, assumenda quasi eum voluptate magni aspernatur aperiam. Eius voluptates rem eum, facilis inventore hic provident pariatur nam non! At odit iste cum.</p>
+  <p class="mb-4 text-lg">Cumque voluptatibus laboriosam tempore architecto laudantium sint vitae cupiditate voluptate quod tempora saepe odio quasi dolores possimus non totam unde voluptates corrupti, ducimus ipsa enim officiis ipsum maxime eveniet. Aut!</p>
+  <p class="mb-4 text-lg">Maxime facere ut natus libero incidunt alias quam consectetur, nisi delectus exercitationem ab qui perferendis dolorem sequi veritatis nobis eius quas dolore ducimus atque vel. Doloribus mollitia non pariatur modi?</p>
+  <p class="mb-4 text-lg">Sed in amet a neque, delectus, cupiditate ab assumenda quidem facere molestias vitae itaque soluta reprehenderit dolorem. Deserunt quibusdam, consequatur veniam fugiat ipsam aliquam ea possimus quis officiis enim dolores.</p>
+  <p class="mb-4 text-lg">Exercitationem aperiam veniam perspiciatis iure ad nobis necessitatibus cumque cupiditate obcaecati natus. Neque nostrum maxime id veritatis tempore, a voluptate voluptatem et! A ullam id aliquam? Recusandae deleniti odit fugit!</p>
+  <p class="mb-4 text-lg">Beatae rerum obcaecati consectetur nostrum eos ipsam, accusamus delectus ex maxime neque sit quod repellendus voluptate sunt dolore hic explicabo ea dolorum vero vel quidem illo! Cupiditate sed voluptatibus ullam?</p>
+  <p class="mb-4 text-lg">Modi aliquam facilis adipisci! Soluta eveniet eos omnis, inventore nesciunt, laborum deserunt blanditiis nihil accusamus debitis voluptatibus possimus dolores vero maiores, sed voluptate ut! Facilis possimus vitae consectetur praesentium veritatis.</p>
+  <p class="mb-4 text-lg">Tempore, quaerat accusamus ad nostrum maiores numquam, ea nam sed reiciendis, eveniet perspiciatis. Eos nulla vel consectetur quo nesciunt aspernatur sint nemo cumque optio mollitia, veritatis, tenetur quibusdam eum natus.</p>
 </div>
 
-<style>
+<div class="bg-quote container flex items-center justify-center h-screen mx-auto">
+  <blockquote class="font-serif mx-4 p-4 text-center text-white md:p-8">
+    <p class="font-bold italic text-3xl">
+      &ldquo;Large, bold pull quote. Hats. Very good.&rdquo;
+    </p>
+  </blockquote>
+</div>
 
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 16px;
-}
-
-body {
-  overflow: hidden;
-  font-size: 1em;
-}
-
-.horizontal-scroll {
- margin-top: 0%;
-  width: 100vh;
-  height: 100vw;
-  overflow-y: auto;
-  overflow-x: hidden;
-  background: #2e2e2e;
-  -webkit-transform-origin: right top;
-          transform-origin: right top;
-  -webkit-transform: rotate(-90deg) translate3d(0, -70vh, 0);
-          transform: rotate(-90deg) translate3d(0, -100vh, 0);
-}
-.horizontal-scroll > * {
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
-  -webkit-transform: rotate(90deg) translate3d(0, calc(-100vh + 60px), 0);
-          transform: rotate(90deg) translate3d(0, -100vh, 0);
-}
-.horizontal-scroll__block {
-  width: 100vh;
-  height: 100vh;
-  background: #fdfffc;
-  position: relative;
-}
-.horizontal-scroll__block:not(:first-child) {
-
-}
-.horizontal-scroll__block .background {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: no-repeat center center / cover;
-  opacity: 0.8;
-  background-blend-mode: luminosity;
-}
-.horizontal-scroll__block .letter {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  right: auto;
-  bottom: auto;
-  left: 50%;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-          transform: translate3d(-50%, -50%, 0);
-  font-weight: normal;
-  font-size: 12em;
-  font-family: "Playfair Display", serif;
-  color: white;
-}
-.horizontal-scroll__block--purple .background {
-  background-color: #52489c;
-}
-.horizontal-scroll__block--yellow .background {
-  background-color: #ecc30b;
-}
-.horizontal-scroll__block--orange .background {
-  background-color: #f37748;
-}
-.horizontal-scroll__block--blue .background {
-  background-color: #4d9de0;
-}
-.horizontal-scroll__block--green .background {
-  background-color: #00bd9d;
-}
-.horizontal-scroll__block--pink .background {
-  background-color: #fb9f89;
-}
-
-</style>
+<div class="font-serif leading-normal mx-auto py-12 px-4 max-w-lg">
+  <p class="mb-4 text-lg">Quae commodi reiciendis dignissimos. Rerum molestiae hic dolores assumenda dolor! Corrupti reiciendis maxime fuga, recusandae obcaecati officia cum temporibus dicta quibusdam praesentium, magni, cumque aperiam iusto sequi illum molestiae non.</p>
+  <p class="mb-4 text-lg">In excepturi repellendus eum, qui corrupti rerum perferendis harum adipisci voluptate? Nihil, quidem deleniti libero officia dicta vel asperiores velit molestiae blanditiis, dolore voluptatibus excepturi laudantium at veniam illo. Dolor!</p>
+  <p class="mb-4 text-lg">Neque laudantium minus doloremque id quas quod sint velit corporis unde dolore accusantium delectus optio consequuntur voluptatem sapiente odit dolorum minima harum tenetur, dolor provident reprehenderit. Ex eum provident harum?</p>
+  <p class="mb-4 text-lg">Mollitia temporibus maxime placeat culpa distinctio possimus, praesentium, assumenda quasi eum voluptate magni aspernatur aperiam. Eius voluptates rem eum, facilis inventore hic provident pariatur nam non! At odit iste cum.</p>
+</div>
